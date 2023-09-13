@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script defer src="./script/anime.js"></script>
+    <script defer src="./script/consulting.js"></script>
+    <script src="https://kit.fontawesome.com/c12878d3ba.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- 헤더 -->
+    <header>
+        <div class="inner">
+            <h1>
+                  <a href="index.html">
+                    S C E N E R Y
+                  </a> 
+            </h1>
+            <!-- 메인메뉴 -->
+            <nav class="menuWeb">
+                <ul id="gnb">
+                    <li><a href="./company.html">Company</a></li>
+                    <li><a href="#">Store</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="location.html">Location</a></li>
+                    <li><a href="./consulting.html">Consulting</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 회원가입 -->
+    <section class="join">
+        <div class="inner">
+            <h1>Consulting</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus eius <br> quidem accusamus impedit sint est, architecto, animi, ab aspernatur quas <br> repellendus nemo autem? Quibusdam sequi illum modi eum dolorum nam.</p>
+            <img src="./이미지/컨설팅.jpg" alt="">
+            <h2>Consulting</h2>
+            <form action="index.html" method="get" id="member">
+                <fieldset>
+                    <legend class="hidden">컨설팅 폼 입력 양식</legend>
+                    <table>
+                        <caption class="hidden">
+                            성명, 연락처, 이메일, 컨설팅 선택사항, 자세한 문의 사항
+                        </caption>
+
+                        <!-- 성명 -->
+                        <tbody>
+                            <tr>
+                                <th scope="row"><label for="name">Name</label></th>
+                                <td>
+                                    <input type="text" name="name" id="name">
+                                </td>
+                            </tr>
+                            <!-- 연락처 -->
+                            <tr>
+                                <th scope="row"><label for="tel">TEL</label></th>
+                                <td>
+                                    <input type="text" name="tel" id="tel" placeholder=" - 빼고 입력">
+                                </td>
+                            </tr>
+                            <!-- 이메일 -->
+                            <tr>
+                                <th scope="row"><label for="email">E-mail</label></th>
+                                <td>
+                                    <input type="text" name="email" id="email">
+                                </td>
+                            </tr>
+                            <!-- 컨설팅 선택사항 -->
+                            <tr>
+                                <th scope="row">Option</th>
+                                <td>
+                                    <label for="">실외건축</label>
+                                    <input type="checkbox" name="design" id="outdoor architecture" value="outdoor architecture">
+                                    <label for="">실내건축</label>
+                                    <input type="checkbox" name="design" id="interior interior" value="interior interior">
+                                </td>
+                            </tr>
+                            <!-- 자세한 문의사항 -->
+                            <tr>
+                                <th scope="row"><label for="comments">Comments</label></th>
+                                <td>
+                                    <textarea name="comments" id="comments"
+                                        placeholder="자세한 문의 사항을 적어주세요"></textarea>
+                                </td>
+                            </tr>
+                            <!-- 버튼 -->
+                            <tr>
+                                <th colspan="2">
+                                    <input type="reset" value="취소">
+                                    <input type="submit" value="제출">
+                                </th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </fieldset>
+            </form>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <!-- <footer>
+        <div class="inner">
+            <h1> S C E N E R Y</h1>
+            <ul>
+                <li>
+                    <a href="#;">Handling Personal Information</a>
+                </li>
+                <li>
+                    <a href="#;">Operation policy</a>
+                </li>
+                <li>
+                    <a href="#;">Customer Service</a>
+                </li>
+                <li>
+                    <a href="#;">CONTACT US</a>
+                </li>
+            </ul>
+            <address>
+                Address: Bucheon 29beongil 7, (Shimgok-dong) <br>
+                SCENERY CEO: Kim Ki-hye Business Number: 666-66655 [Business Information Verification] Business Number: 1209-0000
+            </address>
+            <p>© Corporation SCENERY / Nature and Architecture. All Rights Reserved.</p>
+        </div>
+    </footer> -->
+</body>
+</html>

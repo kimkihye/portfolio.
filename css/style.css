@@ -1,0 +1,1335 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+header {
+  width: 100%;
+  background-color: #efefef;
+}
+header .inner {
+  width: 1180px;
+  height: 120px;
+  margin: 0 auto;
+  position: relative;
+}
+header .inner h1 {
+  position: absolute;
+  left: 1%;
+  bottom: 75px;
+}
+header .inner h1 a {
+  position: absolute;
+  font: bold 30px/1 arial;
+  color: #000;
+  border-bottom: 1px solid #000;
+  margin-top: 10px;
+}
+header .inner .menuWeb #gnb {
+  position: absolute;
+  top: 50px;
+  right: 5px;
+}
+header .inner .menuWeb #gnb li {
+  position: relative;
+  float: left;
+  margin-right: 20px;
+}
+header .inner .menuWeb #gnb li a {
+  display: block;
+  padding: 14px 20px;
+  font: 15px/1 arial;
+  color: #555;
+}
+header .inner .menuWeb #gnb li a:hover {
+  border-bottom: 2px solid #888;
+}
+header .inner .btnCall {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+  width: 20px;
+  height: 20px;
+}
+header .inner .btnCall::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: top 0.5s 0s, transform 0.5s 0.5s;
+}
+header .inner .btnCall::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #000;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: bottom 0.5s 0s, transform 0.5s 0.5s;
+}
+header .inner .btnCall span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #000;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -1px;
+  transition: 1s;
+  text-indent: -9999px;
+}
+header .inner .btnCall.on::before {
+  top: 50%;
+  margin-top: -1px;
+  transform: rotate(45deg);
+}
+header .inner .btnCall.on::after {
+  bottom: 50%;
+  margin-bottom: -1px;
+  transform: rotate(-45deg);
+}
+header .inner .btnCall.on span {
+  transform: translateX(100%);
+  opacity: 0;
+}
+header .inner .menuMo {
+  width: 270px;
+  height: 100vh;
+  background: #333;
+  position: fixed;
+  top: 0;
+  left: -270px;
+  padding: 35px 30px;
+  z-index: 10;
+  transition: 0.5s;
+}
+header .inner .menuMo.on {
+  left: 0;
+}
+header .inner .menuMo h1 {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #666;
+}
+header .inner .menuMo h1 a {
+  display: block;
+  font: bold 24px/1 "arial";
+  color: #fff;
+  text-align: center;
+}
+header .inner .menuMo h1 span {
+  font-size: 12px;
+  color: #aaa;
+}
+header .inner .menuMo #gnbMo {
+  position: absolute;
+  top: 100px;
+  left: 90px;
+}
+header .inner .menuMo #gnbMo li a {
+  display: block;
+  width: 100%;
+  padding: 20px 0;
+  border-bottom: 1px solid #444;
+  font: bold 14px/1 "arial";
+  color: #888;
+  text-align: center;
+}
+
+@media screen and (max-width: 1199px) {
+  header {
+    width: 100%;
+  }
+  header .inner {
+    width: 100%;
+  }
+  header .inner h1 {
+    left: 80px;
+    top: 40px;
+  }
+  header .inner .menuWeb {
+    display: none;
+  }
+  header .inner .btnCall {
+    display: block;
+  }
+}
+#main {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+#main video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#main .inner {
+  width: 1180px;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#main .inner h2 {
+  font: bold 80px/1 "Nanum Myeongjo";
+  color: #fff;
+  margin-bottom: 20px;
+  text-align: center;
+}
+#main .inner p {
+  font: ormal 15px/1 "arial";
+  color: #fff;
+  margin-bottom: 20px;
+  padding-bottom: 40px;
+  line-height: 23px;
+}
+#main .inner .btnOpen {
+  font: normal 13px/1 arial;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 10px 40px;
+  border-radius: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 150px;
+}
+#main .inner .btnOpen:hover {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #fff;
+  transition: 1s;
+}
+
+.boxes {
+  width: 60vw;
+  height: 60vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+.boxes .top {
+  width: 0%;
+  height: 1px;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.boxes .right {
+  width: 1px;
+  height: 0%;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.boxes .bottom {
+  width: 0%;
+  height: 1px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.boxes .left {
+  width: 1px;
+  height: 0%;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.boxes .inner {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(15px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.boxes .inner .pic {
+  width: 35%;
+  object-fit: cover;
+}
+.boxes .inner .content {
+  width: 60%;
+}
+.boxes .inner .content h2 {
+  font: 5vw/1 arial;
+  color: #bbb;
+  margin-bottom: 20px;
+}
+.boxes .inner .content p {
+  font: 16px/1.3 arial;
+  color: #fff;
+}
+.boxes .inner .content .btnClose {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+}
+
+@media screen and (max-width: 1199px) {
+  #main .inner {
+    width: 100%;
+  }
+  #main .inner h2 {
+    font: bold 10vw/1 "Nanum Myeongjo";
+  }
+  #main .inner .btnOpen {
+    top: 80%;
+  }
+}
+#brand {
+  width: 100%;
+  padding: 200px 0;
+}
+#brand .inner {
+  width: 1400px;
+  margin: 0 auto;
+  position: relative;
+}
+#brand .inner h1 {
+  font: bold 30px/1 "Nanum Myeongjo";
+  text-align: center;
+  border-top: 1px solid #000;
+  padding: 20px 0px;
+}
+#brand .inner .wrap {
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+  margin-top: 50px;
+}
+#brand .inner .wrap .panel {
+  width: 150%;
+  margin-left: -25%;
+}
+#brand .inner .wrap .panel::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#brand .inner .wrap .panel article {
+  width: 16.6666666667%;
+  height: 430px;
+  padding: 10px;
+  float: left;
+  transition: 0.2s;
+}
+#brand .inner .wrap .panel article img {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#brand .inner .wrap .panel article img:hover {
+  opacity: 85%;
+}
+#brand .inner .prevs {
+  position: absolute;
+  top: 50%;
+  left: -100px;
+  margin-top: -20px;
+}
+#brand .inner .nexts {
+  position: absolute;
+  top: 50%;
+  right: -100px;
+  margin-top: -20px;
+}
+#brand .natus {
+  position: absolute;
+  font: bold 200px/1 arial;
+  background: linear-gradient(#093028, #237A57);
+  color: transparent;
+  -webkit-background-clip: text;
+  margin-top: 20px;
+  left: -10px;
+}
+
+@media screen and (max-width: 1600px) {
+  #brand {
+    width: 100%;
+  }
+  #brand .inner {
+    width: 100%;
+  }
+  #brand .inner .wrap {
+    width: 450%;
+    height: 100%;
+    margin-left: 20px;
+  }
+  #brand .inner .wrap .panel article {
+    width: 16.6666666667%;
+    height: 70vw;
+    padding: 10px 200px 10px 60px;
+    float: left;
+  }
+  #brand .inner .wrap .panel article img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #brand .inner .prevs {
+    left: 10px;
+  }
+  #brand .inner .nexts {
+    right: 10px;
+  }
+  #brand .natus {
+    font: bold 20vw/1 arial;
+    margin-top: 20px;
+    left: -10px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  #brand .inner .wrap .panel article {
+    padding: 10px 200px 10px 60px;
+  }
+}
+@media screen and (max-width: 300px) {
+  #brand .inner .wrap .panel article {
+    padding: 10px 100px 10px 30px;
+  }
+}
+@media screen and (max-width: 160px) {
+  #brand .inner .wrap .panel article {
+    padding: 10px;
+  }
+}
+figure {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+figure #slider {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -160px;
+  margin-left: -200px;
+}
+figure #slider ul {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+figure #slider ul li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 99999px;
+  transition: 1s;
+}
+figure #slider ul li h2 {
+  font: normal 20px/1 "arial";
+  color: #000;
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  letter-spacing: 2px;
+  transition: 1.5s;
+  margin-top: -60px;
+}
+figure #slider ul li .inner {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-repeat: inherit;
+  background-size: inherit;
+  background-position: inherit;
+}
+figure #slider ul li .inner img {
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10%;
+  margin-left: 50px;
+}
+figure #slider ul li .inner::before, figure #slider ul li .inner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: inherit;
+  background-repeat: inherit;
+  border-radius: 50%;
+  transition: 1.5s;
+}
+figure #slider ul li .inner::before {
+  top: 10%;
+  left: 2%;
+  filter: blur(20px);
+  opacity: 0.7;
+}
+figure #slider ul li a {
+  display: block;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  bottom: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 20px;
+  opacity: 0;
+  transition: opacity 1s, bottom 1s, width 0.5s 1s;
+}
+figure #slider ul li a::before,
+figure #slider ul li a span {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font: bolder 11px/1 "anton";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 2px;
+  color: #000;
+  border-radius: 20px;
+  background-image: inherit;
+}
+figure #slider ul li a span {
+  opacity: 0;
+  text-indent: -40px;
+  transition: 0.5s 1s;
+  border: 1px solid #000;
+}
+figure #slider ul li a span:hover {
+  background-color: #444;
+  color: #fff;
+  transition: 0.5s;
+}
+figure #slider ul li a::before {
+  transform: translateY(30%);
+  filter: blur(10px) saturate(2);
+  opacity: 0.8;
+}
+figure #slider ul li:nth-of-type(1) {
+  transform: translateX(-1200px) scale(0.9);
+}
+figure #slider ul li:nth-of-type(1) .inner::after,
+figure #slider ul li:nth-of-type(1) .inner::before {
+  transform: rotate(-150deg);
+}
+figure #slider ul li:nth-of-type(2) {
+  transform: translateX(-800px) scale(0.9);
+}
+figure #slider ul li:nth-of-type(2) .inner::after,
+figure #slider ul li:nth-of-type(2) .inner::before {
+  transform: rotate(-100deg);
+}
+figure #slider ul li:nth-of-type(3) {
+  transform: translateX(-400px) scale(0.9);
+}
+figure #slider ul li:nth-of-type(3) .inner::after,
+figure #slider ul li:nth-of-type(3) .inner::before {
+  transform: rotate(-50deg);
+}
+figure #slider ul li:nth-of-type(4) {
+  opacity: 1;
+  transform: translateX(0px) scale(1);
+}
+figure #slider ul li:nth-of-type(4) h2 {
+  font-size: 4vw;
+  opacity: 0.8;
+  color: #fff;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  top: -9vh;
+  letter-spacing: 0px;
+  text-align: center;
+}
+figure #slider ul li:nth-of-type(4) .inner::before,
+figure #slider ul li:nth-of-type(4) .inner::after {
+  transform: rotate(0deg);
+}
+figure #slider ul li:nth-of-type(4) a {
+  opacity: 1;
+  bottom: -18%;
+  width: 200px;
+}
+figure #slider ul li:nth-of-type(4) a span {
+  opacity: 1;
+  text-indent: 0px;
+}
+figure #slider ul li:nth-of-type(4) a.off {
+  display: none;
+}
+figure #slider ul li:nth-of-type(5) {
+  transform: translateX(400px) scale(0.9);
+}
+figure #slider ul li:nth-of-type(5) .inner::after,
+figure #slider ul li:nth-of-type(5) .inner::before {
+  transform: rotate(50deg);
+}
+figure #slider ul li:nth-of-type(6) {
+  transform: translateX(800px) scale(0.9);
+}
+figure #slider ul li:nth-of-type(6) .inner::after,
+figure #slider ul li:nth-of-type(6) .inner::before {
+  transform: rotate(100deg);
+}
+figure #slider ul li:nth-of-type(7) {
+  transform: translateX(1200px) scale(0.9);
+}
+figure #slider ul li:nth-of-type(7) .inner::after,
+figure #slider ul li:nth-of-type(7) .inner::before {
+  transform: rotate(150deg);
+}
+figure .btns {
+  position: absolute;
+  bottom: 13vh;
+  right: 10vw;
+  display: flex;
+  gap: 50px;
+  transition: 0.5s;
+}
+figure .btns .prev,
+figure .btns .next {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 1px solid #bbb;
+  cursor: pointer;
+  position: relative;
+}
+figure .btns .prev::before, figure .btns .prev::after,
+figure .btns .next::before,
+figure .btns .next::after {
+  content: "";
+  display: block;
+  width: 17px;
+  height: 2px;
+  background-color: #bbb;
+  position: absolute;
+}
+figure .btns .prev::before,
+figure .btns .next::before {
+  top: 49%;
+  transform: rotate(45deg) translateX(0px);
+}
+figure .btns .prev::after,
+figure .btns .next::after {
+  bottom: 49%;
+  transform: rotate(-45deg) translateX(0px);
+}
+figure .btns .prev span,
+figure .btns .next span {
+  width: 20px;
+  height: 2px;
+  background-color: #bbb;
+  position: absolute;
+  top: 49%;
+  opacity: 1;
+}
+figure .btns .prev::before, figure .btns .prev::after {
+  left: 25px;
+  transform-origin: left center;
+}
+figure .btns .prev span {
+  left: 25px;
+}
+figure .btns .next::before, figure .btns .next::after {
+  right: 25px;
+  transform-origin: right center;
+}
+figure .btns .next span {
+  right: 25px;
+}
+figure .pop {
+  width: 50vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -50vw;
+  background-color: rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 22vh 5vw 10vh 6vw;
+  transition: 0.5s;
+}
+figure .pop h2 {
+  font: 6vw/1 "arial";
+  color: #fff;
+  margin-bottom: 40px;
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: 1s 0.3s;
+}
+figure .pop p {
+  font: 22px/1.2 "arial";
+  color: #ccc;
+  letter-spacing: 1px;
+  margin-bottom: 50px;
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: 0.5s 0.8s;
+}
+figure .pop .close {
+  width: 200px;
+  height: 40px;
+  border: 2px solid #fff;
+  font: bold 14px/1 "arial";
+  color: #fff;
+  cursor: pointer;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+figure .pop .close:hover {
+  background-color: #fff;
+  color: #777;
+}
+figure .pop.on {
+  left: 0;
+}
+figure .pop.on h2,
+figure .pop.on p,
+figure .pop.on .close {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+@media screen and (max-width: 1199px) {
+  figure .banner ul li:nth-of-type(4) {
+    transform: translateX(0px) scale(0.7);
+  }
+  figure .banner ul li:nth-of-type(4) h2 {
+    top: -22vh;
+    font-size: 37vw;
+  }
+  figure .banner ul li:nth-of-type(4) a {
+    width: 100%;
+    bottom: -25%;
+  }
+  figure .btns {
+    width: 100%;
+    bottom: 6vh;
+    right: 0;
+    justify-content: center;
+  }
+}
+#banner {
+  width: 100%;
+  height: 40vh;
+  transition: 1s;
+  position: relative;
+  overflow: hidden;
+}
+#banner .panel {
+  position: relative;
+  width: 1180px;
+  height: 40vh;
+  margin: 0 auto;
+  transition: 1s;
+}
+#banner .panel li {
+  position: absolute;
+  width: 170%;
+  height: 100%;
+  float: left;
+  margin-left: -400px;
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 1s;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+#banner .panel li h2 {
+  font: bold 150px/1 arial;
+  color: #fff;
+  text-shadow: 3px 3px 20px #000;
+  opacity: 80%;
+  position: absolute;
+  margin-left: 170px;
+  margin-top: 100px;
+}
+#banner .panel li.on {
+  opacity: 80%;
+  z-index: 2;
+}
+#banner .panel li:nth-of-type(1) {
+  background-image: url(../이미지/banner.jpg);
+}
+#banner .panel li:nth-of-type(2) {
+  background-image: url(../이미지/banner2.jpg);
+}
+#banner .panel li:nth-of-type(3) {
+  background-image: url(../이미지/banner3.jpg);
+}
+#banner nav {
+  position: absolute;
+  z-index: 3;
+  bottom: 9vh;
+  right: 10vw;
+  display: flex;
+  gap: 40px;
+  color: #fff;
+  cursor: pointer;
+}
+#banner nav i {
+  display: inline-block;
+}
+#banner nav i.on {
+  color: #000;
+  transform: scale(2);
+}
+#banner .btns {
+  position: absolute;
+  left: 10vw;
+  bottom: 10vh;
+  display: flex;
+  gap: 10px;
+  z-index: 3;
+}
+
+#layout {
+  width: 100%;
+  padding: 150px 0;
+}
+#layout .inner {
+  width: 1210px;
+  margin: 0 auto;
+  position: relative;
+}
+#layout .inner h1 {
+  font: bold 30px/1 "Nanum Myeongjo";
+  text-align: left;
+  border-bottom: 1px solid #000;
+  padding: 20px 0px;
+}
+#layout .inner .lay {
+  width: 100%;
+}
+#layout .inner .lay article {
+  width: 280px;
+  float: left;
+  margin-right: 30px;
+}
+#layout .inner .lay article:last-child {
+  margin-right: 0px;
+}
+#layout .inner .lay article .pic1 {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  margin-top: 40px;
+}
+#layout .inner .lay article .pic1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s;
+}
+#layout .inner .lay article .pic1 a {
+  text-align: center;
+  font-size: 70px;
+  color: #fff;
+  position: absolute;
+  margin-top: 60px;
+  margin-left: -175px;
+  opacity: 0;
+}
+#layout .inner .lay article .pic1:hover img {
+  opacity: 70%;
+}
+#layout .inner .lay article .pic1:hover a {
+  opacity: 1;
+  transition: 0.5s;
+}
+#layout .inner .lay article h2 {
+  font: normal 25px/1 arial;
+  margin-top: 15px;
+  border-bottom: 1px solid #000;
+  padding: 5px;
+}
+#layout .inner .lay article p {
+  font: normal 13px/1 arial;
+  color: #555;
+  margin-top: 10px;
+  text-align: end;
+}
+
+footer {
+  width: 100%;
+  padding-top: 100px;
+  margin-top: 300px;
+  padding-bottom: 100px;
+  background-color: #555;
+}
+footer .inner {
+  width: 1180px;
+  margin: 0 auto;
+}
+footer .inner::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+footer .inner h1 {
+  font: bold 30px/1 arial;
+  float: left;
+  margin-bottom: -20px;
+  color: #777;
+}
+footer .inner ul {
+  float: left;
+  display: flex;
+  margin-left: 500px;
+}
+footer .inner ul li {
+  float: left;
+  margin-left: 30px;
+  margin-bottom: -100px;
+}
+footer .inner ul li a {
+  font: 14px/1 arial;
+  color: #999;
+  margin-left: 17px;
+}
+footer .inner address {
+  float: left;
+  width: 100%;
+  font: 14px/1.3 arial;
+  margin-top: 50px;
+  line-height: 30px;
+  color: #888;
+  border-top: 1px solid #888;
+  padding-top: 30px;
+}
+footer .inner p {
+  float: left;
+  margin-top: 50px;
+  color: #aaa;
+}
+
+fieldset {
+  border: none;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.hidden {
+  position: absolute;
+  top: -999999999px;
+  opacity: 0;
+}
+
+.join {
+  width: 100%;
+  padding: 150px 0;
+  background-color: #fff;
+}
+.join .inner {
+  margin: 0 auto;
+  margin-left: 57%;
+  margin-top: -3%;
+}
+.join .inner h1 {
+  position: absolute;
+  font: bold 80px/1 "arial";
+  color: #888;
+  left: 11%;
+  top: 43%;
+}
+.join .inner p {
+  position: absolute;
+  font: normal 20px/1 arial;
+  color: #999;
+  left: 6%;
+  top: 55%;
+}
+.join .inner img {
+  width: 1100px;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  margin-top: -93px;
+  left: -10%;
+  opacity: 40%;
+}
+.join .inner h2 {
+  font: normal 60px/1 "Raleway";
+  color: #555;
+  margin-bottom: 50px;
+}
+.join .inner table {
+  border-top: 2px solid #333;
+  border-bottom: 2px solid #333;
+}
+.join .inner table th,
+.join .inner table td {
+  border-bottom: 1px solid #ddd;
+  height: 65px;
+  padding: 15px 25px;
+}
+.join .inner table th {
+  width: 20%;
+}
+.join .inner table th input[type=reset],
+.join .inner table th input[type=submit] {
+  width: 30%;
+  height: 40px;
+  border: 1px solid #333;
+  margin: 10px;
+  font: bold 14px/40px "맑은 고딕";
+  color: #555;
+  cursor: pointer;
+  background-color: #fff;
+}
+.join .inner table th input[type=reset]:hover,
+.join .inner table th input[type=submit]:hover {
+  background-color: #333;
+  color: #fff;
+}
+.join .inner table td {
+  border-left: 1px solid #aaa;
+  position: relative;
+}
+.join .inner table input[type=checkbox] {
+  margin-right: 30px;
+}
+.join .inner table textarea {
+  resize: none;
+  width: 60%;
+  height: 150px;
+  padding: 10px;
+  border: 1px solid #aaa;
+  background-color: rgba(0, 0, 0, 0.03);
+}
+.join .inner table p {
+  font: bold 11px/1 "맑은 고딕";
+  color: darkred;
+  margin-top: 10px;
+  position: static;
+}
+
+#company {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+#company img {
+  width: 100%;
+  height: 470px;
+  object-fit: cover;
+  opacity: 80%;
+}
+#company .inner {
+  width: 1100px;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#company .inner h2 {
+  font: bold 70px/1 "Nanum Myeongjo";
+  text-align: center;
+  color: #fff;
+  text-shadow: 4px 4px 15px #555;
+  margin-top: -230px;
+}
+#company .inner p {
+  font: 20px/1 "arial";
+  color: #eee;
+  text-shadow: 4px 4px 10px #333;
+  margin-top: 65px;
+  margin-left: 230px;
+}
+
+#news {
+  width: 100%;
+  padding: 200px 0;
+}
+#news .inner {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  margin-left: 350px;
+}
+#news .inner h2 {
+  width: 500px;
+  font: bold 50px/1 arial;
+  color: #333;
+  border-bottom: 1px solid #000;
+}
+#news .inner p {
+  font: normal 25px/1.5 arial;
+  margin-top: 30px;
+  color: #555;
+}
+#news .img img {
+  overflow: hidden;
+  position: absolute;
+  width: 350px;
+  height: 400px;
+  object-fit: cover;
+  bottom: -80%;
+  left: 70%;
+}
+#news .img img:nth-of-type(1) {
+  top: -30%;
+  left: 75%;
+  opacity: 50%;
+  filter: blur(10px);
+}
+#news .png {
+  position: absolute;
+  margin-bottom: -17px;
+  left: -10px;
+}
+#news .png img {
+  width: 300px;
+  height: 300px;
+}
+
+#news2 {
+  width: 100%;
+  padding: 100px 0;
+  margin-top: 100px;
+  background-color: #eee;
+}
+#news2 .boxs {
+  width: 1200px;
+  height: 300px;
+  margin: 0 auto;
+  margin-left: 330px;
+}
+#news2 .boxs article {
+  width: 350px;
+  height: 350px;
+  background-color: #fff;
+  float: left;
+  margin-left: 50px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 5%;
+  margin-top: -20px;
+}
+#news2 .boxs article i {
+  font-size: 60px;
+  color: #187566;
+  margin-left: 40%;
+  margin-top: 70px;
+  opacity: 80%;
+}
+#news2 .boxs article h2 {
+  text-align: center;
+  margin-top: 60px;
+  font: bold 30px/1 arial;
+  color: #333;
+}
+#news2 .boxs article p {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#tap {
+  width: 1400px;
+  height: 600px;
+  background-color: #fff;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);
+  margin: 200px auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+#tap .panels {
+  width: 500%;
+  height: 100%;
+  margin-left: 0%;
+  transition: 0.5s;
+}
+#tap .panels::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#tap .panels li {
+  width: 20%;
+  height: 100%;
+  float: left;
+}
+#tap .panels li img {
+  width: 700px;
+  height: 600px;
+  object-fit: cover;
+  margin-left: 699px;
+  opacity: 90%;
+}
+#tap .panels li h2 {
+  font: bold 80px/1 arial;
+  position: absolute;
+  top: 20%;
+  margin-left: 60px;
+}
+#tap .panels li p {
+  position: absolute;
+  top: 40%;
+  margin-left: 60px;
+  font: 20px/1.2 arial;
+  color: #333;
+}
+
+.btn {
+  position: absolute;
+  bottom: 30px;
+  left: 47%;
+}
+.btn li {
+  float: left;
+  margin-right: 20px;
+}
+.btn li a {
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 10px;
+  border: 1px solid #333;
+}
+.btn li.on a {
+  background-color: #000;
+}
+
+.location {
+  width: 1180px;
+  margin: 0 auto;
+  margin-top: 150px;
+}
+.location .inner h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font: bold 4vh/1 arial;
+}
+.location .inner .loca {
+  width: 260px;
+  height: 90px;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  font-size: 90%;
+}
+.location .inner .loca i {
+  font-size: 23px;
+  position: absolute;
+  top: 10%;
+  left: -15%;
+  color: #000;
+  transform: scale(1);
+  transition: 1s;
+}
+.location .inner .loca i:hover {
+  transform: scale(1.5);
+}
+.location #map {
+  width: 100%;
+  height: 500px;
+  border: 1px solid #000;
+  margin-bottom: 20px;
+}
+.location::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.location .traffic {
+  float: left;
+}
+.location .traffic li {
+  float: left;
+  margin-right: 20px;
+}
+.location .traffic li a {
+  display: block;
+  width: 200px;
+  height: 40px;
+  background-color: #333;
+  font: bold 12px/40px "맑은 고딕";
+  color: #fff;
+  text-align: center;
+  border: 1px solid #555;
+  border-radius: 10px;
+}
+.location .traffic li.on a {
+  background-color: #fff;
+  color: #333;
+}
+.location .branch {
+  float: right;
+}
+.location .branch li {
+  float: left;
+  margin-left: 10px;
+}
+.location .branch li a {
+  display: block;
+  width: 200px;
+  height: 40px;
+  background-color: #333;
+  font: bold 12px/40px "맑은 고딕";
+  color: #fff;
+  text-align: center;
+  border-radius: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */
