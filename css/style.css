@@ -31,7 +31,7 @@ header .inner {
 }
 header .inner h1 {
   position: absolute;
-  left: 1%;
+  left: 3%;
   bottom: 75px;
 }
 header .inner h1 a {
@@ -386,7 +386,7 @@ header .inner .menuMo #gnbMo li a {
   left: -10px;
 }
 
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1500px) {
   #brand {
     width: 100%;
   }
@@ -401,7 +401,7 @@ header .inner .menuMo #gnbMo li a {
   #brand .inner .wrap .panel article {
     width: 16.6666666667%;
     height: 70vw;
-    padding: 10px 200px 10px 60px;
+    padding: 10px 270px 10px 60px;
     float: left;
   }
   #brand .inner .wrap .panel article img {
@@ -428,14 +428,22 @@ header .inner .menuMo #gnbMo li a {
     padding: 10px 200px 10px 60px;
   }
 }
+@media screen and (max-width: 500px) {
+  #brand .inner .wrap .panel article {
+    padding: 10px 150px 10px 50px;
+  }
+}
 @media screen and (max-width: 300px) {
   #brand .inner .wrap .panel article {
     padding: 10px 100px 10px 30px;
   }
 }
 @media screen and (max-width: 160px) {
+  #brand .inner h1 {
+    font: bold 25px/1 "Nanum Myeongjo";
+  }
   #brand .inner .wrap .panel article {
-    padding: 10px;
+    padding: 0px 80px 20px 20px;
   }
 }
 figure {
@@ -748,17 +756,6 @@ figure .pop.on .close {
 }
 
 @media screen and (max-width: 1199px) {
-  figure .banner ul li:nth-of-type(4) {
-    transform: translateX(0px) scale(0.7);
-  }
-  figure .banner ul li:nth-of-type(4) h2 {
-    top: -22vh;
-    font-size: 37vw;
-  }
-  figure .banner ul li:nth-of-type(4) a {
-    width: 100%;
-    bottom: -25%;
-  }
   figure .btns {
     width: 100%;
     bottom: 6vh;
@@ -815,32 +812,20 @@ figure .pop.on .close {
 #banner .panel li:nth-of-type(3) {
   background-image: url(../이미지/banner3.jpg);
 }
-#banner nav {
-  position: absolute;
-  z-index: 3;
-  bottom: 9vh;
-  right: 10vw;
-  display: flex;
-  gap: 40px;
-  color: #fff;
-  cursor: pointer;
-}
-#banner nav i {
-  display: inline-block;
-}
-#banner nav i.on {
-  color: #000;
-  transform: scale(2);
-}
-#banner .btns {
-  position: absolute;
-  left: 10vw;
-  bottom: 10vh;
-  display: flex;
-  gap: 10px;
-  z-index: 3;
-}
 
+@media screen and (max-width: 1580px) {
+  #banner .panel {
+    width: 100%;
+  }
+  #banner .panel li {
+    width: 100%;
+    margin-left: -10px;
+  }
+  #banner .panel li h2 {
+    font: bold 15vw/1 arial;
+    margin-left: 30px;
+  }
+}
 #layout {
   width: 100%;
   padding: 150px 0;
@@ -881,11 +866,11 @@ figure .pop.on .close {
 }
 #layout .inner .lay article .pic1 a {
   text-align: center;
-  font-size: 70px;
+  font-size: 4vw;
   color: #fff;
   position: absolute;
   margin-top: 60px;
-  margin-left: -175px;
+  margin-left: -180px;
   opacity: 0;
 }
 #layout .inner .lay article .pic1:hover img {
@@ -908,6 +893,57 @@ figure .pop.on .close {
   text-align: end;
 }
 
+@media screen and (max-width: 1199px) {
+  #layout {
+    padding: 100px 30px 450px;
+  }
+  #layout .inner {
+    width: 100%;
+  }
+  #layout .inner .lay article {
+    width: 49%;
+    margin-right: 2%;
+    margin-top: -15px;
+  }
+  #layout .inner .lay article:nth-of-type(2n) {
+    margin-right: 0;
+  }
+  #layout .inner .lay article .pic1 {
+    height: 20vmax;
+  }
+  #layout .inner .lay article .pic1 a {
+    font-size: 8vw;
+    margin-left: -30%;
+  }
+  #layout .inner .lay article h2 {
+    font: normal 150%/1 arial;
+  }
+}
+@media screen and (max-width: 220px) {
+  #layout {
+    padding: 100px 30px 450px;
+  }
+  #layout .inner {
+    width: 100%;
+  }
+  #layout .inner .lay article {
+    width: 49%;
+    margin-right: 2%;
+    margin-top: -15px;
+  }
+  #layout .inner .lay article:nth-of-type(2n) {
+    margin-right: 0;
+  }
+  #layout .inner .lay article .pic1 {
+    height: 20vmax;
+  }
+  #layout .inner .lay article .pic1 a {
+    font-size: 5vw;
+  }
+  #layout .inner .lay article h2 {
+    font: normal 90%/1 arial;
+  }
+}
 footer {
   width: 100%;
   padding-top: 100px;

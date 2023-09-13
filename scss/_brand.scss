@@ -71,7 +71,7 @@
     }
 }
 
-@media screen and (max-width:1600px){
+@media screen and (max-width:1500px){
     #brand{
         width: 100%;
         .inner{
@@ -84,7 +84,7 @@
                     article{
                     width: calc(100% / 6);
                     height: 70vw;
-                    padding: 10px 200px 10px 60px; 
+                    padding: 10px 270px 10px 60px; 
                     float: left;
                         img{
                             width: 100%; height: 100%; 
@@ -123,6 +123,20 @@
     }
 }
 
+@media screen and (max-width:500px){
+    #brand{
+        .inner{
+            .wrap{
+                .panel{
+                    article{
+                    padding: 10px 150px 10px 50px; 
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width:300px){
     #brand{
         .inner{
@@ -140,10 +154,13 @@
 @media screen and (max-width:160px){
     #brand{
         .inner{
+            h1{
+                font: bold 25px/1 "Nanum Myeongjo";
+            }
             .wrap{
                 .panel{
                     article{
-                    padding: 10px; 
+                    padding: 0px 80px 20px 20px; 
                     }
                 }
             }

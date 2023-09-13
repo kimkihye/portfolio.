@@ -412,31 +412,15 @@ figure {
         .banner {
             ul {
                 li {
-                    &:nth-of-type(4) {
-                        transform: translateX(0px) scale(0.7);
-
-                        h2 {
-                            top: -22vh;
-                            font-size: 37vw;
-                        }
-
-                        a {
-                            width: 100%;
-                            bottom: -25%;
-                        }
-                    }
                 }
             }
         }
-
+//글자가이상함
         .btns {
             width: 100%;
             bottom: 6vh;
             right: 0;
             justify-content: center;
-            // justify-content: space-evenly;
-
-
         }
     }
 }
