@@ -177,6 +177,43 @@ header .inner .menuMo #gnbMo li a {
   header .inner .btnCall {
     display: block;
   }
+  header .inner .btnCall::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #000;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: bottom 0.5s 0s, transform 0.5s 0.5s;
+  }
+  header .inner .btnCall span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #000;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -1px;
+    transition: 1s;
+    text-indent: -9999px;
+  }
+  header .inner .btnCall.on::before {
+    top: 50%;
+    margin-top: -1px;
+    transform: rotate(45deg);
+  }
+  header .inner .btnCall.on::after {
+    bottom: 50%;
+    margin-bottom: -1px;
+    transform: rotate(-45deg);
+  }
+  header .inner .btnCall.on span {
+    transform: translateX(100%);
+    opacity: 0;
+  }
 }
 #main {
   width: 100%;
@@ -1212,7 +1249,7 @@ table {
   transform: translate(-50%, -50%);
 }
 #company .inner h2 {
-  font: bold 70px/1 "Nanum Myeongjo";
+  font: bold 4vw/1 "Nanum Myeongjo";
   text-align: center;
   color: #fff;
   text-shadow: 4px 4px 15px #555;
@@ -1220,10 +1257,11 @@ table {
 }
 #company .inner p {
   font: 20px/1 "arial";
+  text-align: center;
   color: #eee;
   text-shadow: 4px 4px 10px #333;
   margin-top: 65px;
-  margin-left: 230px;
+  margin-left: -100px;
 }
 
 #news {
@@ -1264,7 +1302,6 @@ table {
 }
 #news .png {
   position: absolute;
-  margin-bottom: -17px;
   left: -10px;
 }
 #news .png img {
@@ -1379,6 +1416,151 @@ table {
   background-color: #000;
 }
 
+@media screen and (max-width: 1199px) {
+  #company .inner {
+    width: 200%;
+  }
+  #company .inner h2 {
+    font: bold 7vw/1 "Nanum Myeongjo";
+  }
+  #company .inner p {
+    font: 3vw/1 "arial";
+    margin-left: 10px;
+  }
+  #news {
+    width: 100%;
+    padding: 200px 0;
+  }
+  #news .inner {
+    width: 100%;
+    bottom: -200px;
+    margin-left: 10px;
+  }
+  #news .inner h2 {
+    width: 90px;
+    font: bold 30px/1 arial;
+    color: #333;
+    border-bottom: 1px solid #000;
+  }
+  #news .inner p {
+    font: normal 10px/1.5 arial;
+    margin-top: 30px;
+    color: #555;
+  }
+  #news .img img {
+    width: 60%;
+    height: 150%;
+    bottom: 140%;
+    left: 5%;
+  }
+  #news .img img:nth-of-type(1) {
+    top: -230%;
+    left: 20%;
+    opacity: 50%;
+    filter: blur(10px);
+  }
+  #news .png {
+    display: none;
+    bottom: -50px;
+    left: -100px;
+  }
+  #news .png img {
+    width: 150px;
+    height: 150px;
+  }
+  #news2 {
+    padding: 10px 0 100px 0px;
+  }
+  #news2 .boxs {
+    width: 100%;
+    height: 300px;
+    margin-left: -50px;
+    margin-bottom: 600px;
+  }
+  #news2 .boxs article {
+    width: 250px;
+    height: 250px;
+    margin-left: 75px;
+    margin-top: 50px;
+  }
+  #news2 .boxs article i {
+    font-size: 6vh;
+    margin-left: 35%;
+    margin-top: 35px;
+  }
+  #news2 .boxs article h2 {
+    margin-top: 30px;
+    font: bold 7vw/1 arial;
+  }
+  #news2 .boxs article p {
+    margin-top: 20px;
+  }
+  #tap {
+    width: 1400px;
+    height: 600px;
+    background-color: #fff;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);
+    margin: 200px auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  #tap .panels {
+    width: 500%;
+    height: 100%;
+    margin-left: 0%;
+    transition: 0.5s;
+  }
+  #tap .panels::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  #tap .panels li {
+    width: 20%;
+    height: 100%;
+    float: left;
+  }
+  #tap .panels li img {
+    width: 700px;
+    height: 600px;
+    object-fit: cover;
+    margin-left: 699px;
+    opacity: 90%;
+  }
+  #tap .panels li h2 {
+    font: bold 80px/1 arial;
+    position: absolute;
+    top: 20%;
+    margin-left: 60px;
+  }
+  #tap .panels li p {
+    position: absolute;
+    top: 40%;
+    margin-left: 60px;
+    font: 20px/1.2 arial;
+    color: #333;
+  }
+  .btn {
+    position: absolute;
+    bottom: 30px;
+    left: 47%;
+  }
+  .btn li {
+    float: left;
+    margin-right: 20px;
+  }
+  .btn li a {
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 10px;
+    border: 1px solid #333;
+  }
+  .btn li.on a {
+    background-color: #000;
+  }
+}
 .location {
   width: 1180px;
   margin: 0 auto;
@@ -1396,18 +1578,9 @@ table {
   color: #fff;
   padding: 10px;
   font-size: 90%;
-}
-.location .inner .loca i {
-  font-size: 23px;
-  position: absolute;
-  top: 10%;
-  left: -15%;
-  color: #000;
-  transform: scale(1);
-  transition: 1s;
-}
-.location .inner .loca i:hover {
-  transform: scale(1.5);
+  position: relative;
+  left: 78%;
+  bottom: -590px;
 }
 .location #map {
   width: 100%;

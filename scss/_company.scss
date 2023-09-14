@@ -17,7 +17,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
         h2{
-            font: bold 70px/1 "Nanum Myeongjo";
+            font: bold 4vw/1 "Nanum Myeongjo";
             text-align: center;
             color: #fff;
             text-shadow: 4px 4px 15px #555;
@@ -26,10 +26,11 @@
         }
         p{
             font: 20px/1 "arial";
+            text-align: center;
             color: #eee;
             text-shadow: 4px 4px 10px #333;
             margin-top: 65px;
-            margin-left: 230px;
+            margin-left: -100px;
         }
     }
 }
@@ -48,15 +49,7 @@
             font: bold 50px/1 arial;
             color: #333;
             border-bottom: 1px solid #000;
-            // margin-bottom: 100px;
         }
-        // span{
-        //     position: absolute;
-        //     top: -30px;
-        //     font: bold 15px/1 arial;
-        //     color: #aed581;
-            
-        // }
         p{
             font: normal 25px/1.5 arial;
             margin-top: 30px;
@@ -64,7 +57,8 @@
         }  
     }
     .img{
-       img{overflow: hidden;
+       img{
+        overflow: hidden;
             position: absolute;
             width: 350px;
             height: 400px;
@@ -82,23 +76,12 @@
     }
     .png{
         position: absolute;
-        margin-bottom: -17px;
         left: -10px;
-img{
-    width: 300px;
-    height: 300px;
-}
+    img{
+            width: 300px;
+            height: 300px;
+        }
     }
-    // .png{
-    //     width: 100%;
-    //     height: 10px;
-    //     margin-bottom: -10px;
-    //     margin-left: -10px;
-    //     img{
-    //         width: 300px;
-    //         height: 300px;
-    //     }
-    // }
 }
 
 //2
@@ -142,16 +125,7 @@ img{
     }
 }
 
-//3
-// .txth{
-//     h2{
-//         font-size: 7vh;
-//         text-align: center;
-//         color: #333;
-//         font-family: "Nanum Myeongjo";
-//         margin-top: 120px;
-//     }
-// }
+
 #tap{
     width: 1400px;
     height: 600px;
@@ -227,3 +201,175 @@ img{
         }   
     }
         
+
+
+
+
+
+
+
+
+@media screen and (max-width:1199px){
+    #company{
+        img{
+        }
+        .inner{
+            width: 200%;
+            h2{
+                font: bold 7vw/1 "Nanum Myeongjo";
+            }
+            p{
+                font: 3vw/1 "arial";
+                margin-left: 10px;
+            }
+        }
+    }
+    
+    // 1
+    #news{
+        width: 100%;
+        padding: 200px 0;
+        .inner{
+            width: 100%;
+            bottom: -200px;
+            margin-left: 10px;
+            h2{
+                width: 90px;
+                font: bold 30px/1 arial;
+                color: #333;
+                border-bottom: 1px solid #000;
+            }
+            p{
+                font: normal 10px/1.5 arial;
+                margin-top: 30px;
+                color: #555;
+            }  
+        }
+        .img{
+            // position: absolute;
+           img{
+                width: 60%;
+                height: 150%;
+                bottom: 140%;
+                left: 5%;
+                
+                &:nth-of-type(1){
+                    top: -230%;
+                    left: 20%;
+                    opacity: 50%;
+                    filter: blur(10px);
+                }
+            } 
+        }
+        .png{
+            display: none;
+            bottom: -50px;
+            left: -100px;
+        img{
+                width: 150px;
+                height: 150px;
+            }
+        }
+    }
+    
+    //2
+    #news2{
+        padding: 10px 0 100px 0px;
+        .boxs{
+            width: 100%;
+            height: 300px;
+            margin-left: -50px;
+            margin-bottom: 600px;
+            article{
+                width: 250px;
+                height: 250px;
+                margin-left: 75px;
+                margin-top: 50px;
+                i{
+                    font-size: 6vh;
+                    margin-left: 35%;
+                    margin-top: 35px;
+                }
+                h2{
+                    margin-top: 30px;
+                    font: bold 7vw/1 arial;
+                }
+                p{
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+    
+    //3
+    #tap{
+        width: 1400px;
+        height: 600px;
+        background-color: #fff;
+        box-shadow: 3px 3px 20px rgba(0,0,0,0.2);
+        margin: 200px auto;
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        .panels{
+            width: 500%;
+            height: 100%;
+            margin-left: 0%;
+            transition: 0.5s;
+            &::after{
+                content: '';
+                display: block;
+                clear: both;
+            }
+            li{
+                width: 20%;
+                height: 100%;
+                float: left;
+                    img{
+                        width: calc(1400px/2);
+                        height: 600px;
+                        object-fit: cover;
+                        // position: absolute;
+                        margin-left: 699px;
+                        opacity: 90%;
+                    }
+                    h2{
+                        font: bold 80px/1 arial;
+                        //text-align: center;
+                        position: absolute;
+                        top: 20%;
+                        margin-left: 60px;
+                    }
+                    p{
+                        position: absolute;
+                        top: 40%;
+                        margin-left: 60px;
+                        font: 20px/1.2 arial;
+                        color: #333;
+    
+                    }
+                }
+            }
+        }
+        .btn{
+        position: absolute;
+            bottom: 30px;
+            left: 47%;
+            li{
+                float: left;
+                margin-right: 20px;
+                a{
+                    display: block;
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 10px;
+                    border: 1px solid #333;
+                }
+                &.on{
+                    a{
+                        background-color: #000;
+                    }
+                }
+            }   
+        }
+}
