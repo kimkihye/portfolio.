@@ -16,13 +16,11 @@ footer{
         h1{
             font: bold 30px/1 arial;
             float: left;
-            //border-bottom: 1px solid #000;
             margin-bottom: -20px;
-            color: #777;
+            color: #999;
         }
         ul{
             float: left;
-            //margin-top: -50px;
             display: flex;
             margin-left: 500px;
             li{
@@ -34,18 +32,6 @@ footer{
                     color: #999;
                     margin-left: 17px;
                 }
-                // i{
-                //     opacity: 0;
-                // }
-                // &:hover{
-                    
-                //     // i{
-                //     //     float: left;
-                //     //     margin-top: -15px;
-                //     //     margin-left: -10px;
-                //     //     opacity: 1;
-                //     // }
-                // }
             }
         }
         address{
@@ -62,6 +48,45 @@ footer{
             float: left;
             margin-top: 50px;
             color: #aaa;
+        }
+    }
+}
+
+@media screen and (max-width:1170px){
+    footer{
+        .inner{
+            width: 100%;
+            h1{
+            }
+            ul{
+                float: left;
+                display: flex;
+                margin-left: 500px;
+                li{
+                    float: left;
+                    margin-left: 10%;
+                    margin-bottom: -100px;
+                    a{
+                        font: 90%/1 arial;
+                        margin-left: 10px;
+                    }
+                }
+            }
+            address{
+                float: left;
+                width: 100%;
+                font: 14px/1.3 arial;
+                margin-top: 50px;
+                line-height: 30px;
+                color: #888;
+                border-top: 1px solid #888;
+                padding-top: 30px;
+            }
+            p{
+                float: left;
+                margin-top: 50px;
+                color: #aaa;
+            }
         }
     }
 }

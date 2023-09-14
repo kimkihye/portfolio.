@@ -29,35 +29,47 @@ panel.prepend(panel.lastElementChild);
 
 nexts.addEventListener("click",(e)=>{
     e.preventDefault();
-
-    panel.style.transition ="margin-left 0.5s";
+    if(enableClick){
+        enableClick = false;
+        
+    panel.style.transition = "margin-left 0.5s";
     panel.style.marginLeft = "-50%";
 
     //슬라이더 순환이 되기 위한 코드
     panel.addEventListener("transitionend",()=>{
-        panel.appendChild(panel.children[0]);
+        panel.append(panel.firstElementChild);        
         panel.style.transition = "none";
-        panel.style.marginLeft = "-25%"
+        panel.style.marginLeft = "-25%";
+        enableClick = true;
     }, {once : true});
-    //once : true는 이 이벤트 리스너가 오직 한번만 실행 된 후 그 후 자동적으로
-    //제거 되도록 한다
-})
+
+    }
+    //once : true는 이 벤트 리스너가 오직 한번만 실행 된 다음 그 후에 자동적으로 제거 되도록 한다
+
+});
 
 prevs.addEventListener("click",(e)=>{
     e.preventDefault();
+    if(enableClick){
+        enableClick = false;
+        panel.style.transition = "margin-left 0.5s";
+        panel.style.marginLeft = "0%";
 
-    panel.style.transition ="margin-left 0.5s";
-    panel.style.marginLeft = "0%";
+        //슬라이더 순환이 되기 위한 코드
+        panel.addEventListener("transitionend",()=>{
+            panel.prepend(panel.lastElementChild);        
+            panel.style.transition = "none";
+            panel.style.marginLeft = "-25%";
+            enableClick = true;
+        }, {once : true});
+    }
+    
 
-    //슬라이더 순환이 되기 위한 코드
-    panel.addEventListener("transitionend",()=>{
-        panel.prepend(panel.children[panel.children.length -1]);
-        panel.style.transition = "none";
-        panel.style.marginLeft = "-25%";
-    }, {once : true});
-    //once : true는 이 이벤트 리스너가 오직 한번만 실행 된 후 그 후 자동적으로
-    //제거 되도록 한다
-})
+
+
+    //once : true는 이 벤트 리스너가 오직 한번만 실행 된 다음 그 후에 자동적으로 제거 되도록 한다
+
+});
 
 window.addEventListener("scroll",()=>{
     let scroll = window.scrollY || window.pageYOffset
@@ -69,15 +81,6 @@ window.addEventListener("scroll",()=>{
         natus.style.left = `-10px`;
     }
 })
-
-
-
-
-
-
-
-
-
 
 
 //서클슬라이더
@@ -92,27 +95,33 @@ const pop = document.querySelector(".pop");
 const close = pop.querySelector(".close");
 const opens = slider_ul.querySelectorAll("a");
 
-// let enableClick = true;
+let enableClick = true;
 
 for (let i = 0; i < 3; i++) { slider_ul.prepend(slider_ul.lastElementChild); }
 
 prev.addEventListener("click", () => {
-    slider_ul.prepend(slider_ul.lastElementChild);
-
-    for (let el of sliders) el.classList.remove("on");
-    sliders[3].classList.add("on");
-
-    // if(enableClick){
-    //     for(let el of sliders) el.classList.remove("on");
-    //     sliders[3].classList.add("on");
-    // }
+    if(enableClick){
+        enableClick = false;
+        slider_ul.prepend(slider_ul.lastElementChild);
+        for(let el of sliders) el.classList.remove("on");
+        sliders[3].classList.add("on");
+        setTimeout(()=>{
+            enableClick = true;
+        }, 500);
+    }
 
 })
 
 next.addEventListener("click", () => {
-    slider_ul.append(slider_ul.firstElementChild);
-    for (let el of sliders) el.classList.remove("on");
-    sliders[3].classList.add("on");
+    if(enableClick){
+        enableClick = false;
+        slider_ul.append(slider_ul.firstElementChild);
+        for (let el of sliders) el.classList.remove("on");
+        sliders[3].classList.add("on");
+        setTimeout(()=>{
+            enableClick = true;
+        }, 500);
+    }
 })
 
 //opens
