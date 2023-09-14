@@ -381,9 +381,10 @@ figure {
 }
 
 
-@media screen and (max-width:1199px) {
+@media screen and (max-width:310px) {
     figure {
         #slider {
+            top: 40%;
             ul {
                 li {
                     //활성화 된 패널
@@ -409,61 +410,62 @@ figure {
             bottom: 6vh;
             left: -5px;
             justify-content: center;
+            top: 80%;
         }
 
     }
 }
 
-@media screen and (max-width:300px) {
-    figure {
-        #slider {
-            ul {
-                li {
-                    &:nth-of-type(4) {
-                        transform: translateX(0px) scale(1);
+// @media screen and (max-width:310px) {
+//     figure {
+//         #slider {
+//             ul {
+//                 li {
+//                     &:nth-of-type(4) {
+//                         transform: translateX(0px) scale(1);
     
-                        h2 {
-                            color: #aaa;
-                            top: -1vh;
-                        }
-                    }
-                }
-            }
-        }
+//                         h2 {
+//                             color: #aaa;
+//                             top: -1vh;
+//                         }
+//                     }
+//                 }
+//             }
+//         }
     
-        .btns {
-        }
-        .pop {
-        h2 {
-            font: 10vw/1 "arial";
-        }
+//         .btns {
+//         }
+//         .pop {
+//         h2 {
+//             font: 10vw/1 "arial";
+//         }
 
-        p {
-            font: 6vw/1.2 "arial";
-        }
+//         p {
+//             font: 6vw/1.2 "arial";
+//         }
 
-        .close {
-            width: 100%;
-            height: 40px;
-            border: 2px solid #fff;
-            font: bold 14px/1 "arial";
-            color: #fff;
-            cursor: pointer;
-            transition: 0.5s;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
+//         .close {
+//             width: 100%;
+//             height: 40px;
+//             border: 2px solid #fff;
+//             font: bold 14px/1 "arial";
+//             color: #fff;
+//             cursor: pointer;
+//             transition: 0.5s;
+//             display: flex;
+//             justify-content: center;
+//             align-items: center;
+//             opacity: 0;
 
-            &:hover {
-                background-color: #fff;
-                color: #777;
-            }
+//             &:hover {
+//                 background-color: #fff;
+//                 color: #777;
+//             }
 
-        }
-    }
+//         }
+//     }
     
-    }
-}
+//     }
+// }
   
     

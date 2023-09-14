@@ -31,7 +31,7 @@ header .inner {
 }
 header .inner h1 {
   position: absolute;
-  left: 3%;
+  left: 80px;
   bottom: 75px;
 }
 header .inner h1 a {
@@ -317,6 +317,83 @@ header .inner .menuMo #gnbMo li a {
     top: 80%;
   }
 }
+.boxes {
+  width: 60vw;
+  height: 60vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+.boxes .top {
+  width: 0%;
+  height: 1px;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.boxes .right {
+  width: 1px;
+  height: 0%;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.boxes .bottom {
+  width: 0%;
+  height: 1px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.boxes .left {
+  width: 1px;
+  height: 0%;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.boxes .inner {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(15px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.boxes .inner .pic {
+  width: 80%;
+}
+.boxes .inner .content {
+  width: 100%;
+}
+.boxes .inner .content h2 {
+  font: 5vw/1 arial;
+  color: #bbb;
+  margin-bottom: 20px;
+}
+.boxes .inner .content p {
+  font: 14px/1.3 arial;
+  color: #fff;
+}
+.boxes .inner .content .btnClose {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+}
+
 #brand {
   width: 100%;
   padding: 200px 0;
@@ -385,7 +462,7 @@ header .inner .menuMo #gnbMo li a {
   left: -10px;
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 310px) {
   #brand {
     width: 100%;
   }
@@ -400,8 +477,8 @@ header .inner .menuMo #gnbMo li a {
   #brand .inner .wrap .panel article {
     width: 16.6666666667%;
     height: 70vw;
-    padding: 10px 270px 10px 60px;
     float: left;
+    padding: 10px 100px 10px 30px;
   }
   #brand .inner .wrap .panel article img {
     width: 100%;
@@ -411,38 +488,15 @@ header .inner .menuMo #gnbMo li a {
     align-items: center;
   }
   #brand .inner .prevs {
-    left: 10px;
+    left: -5px;
   }
   #brand .inner .nexts {
-    right: 10px;
+    right: -5px;
   }
   #brand .natus {
     font: bold 20vw/1 arial;
     margin-top: 20px;
     left: -10px;
-  }
-}
-@media screen and (max-width: 1199px) {
-  #brand .inner .wrap .panel article {
-    padding: 10px 200px 10px 60px;
-  }
-}
-@media screen and (max-width: 500px) {
-  #brand .inner .wrap .panel article {
-    padding: 10px 150px 10px 50px;
-  }
-}
-@media screen and (max-width: 300px) {
-  #brand .inner .wrap .panel article {
-    padding: 10px 100px 10px 30px;
-  }
-}
-@media screen and (max-width: 160px) {
-  #brand .inner h1 {
-    font: bold 25px/1 "Nanum Myeongjo";
-  }
-  #brand .inner .wrap .panel article {
-    padding: 0px 80px 20px 20px;
   }
 }
 figure {
@@ -754,7 +808,10 @@ figure .pop.on .close {
   transform: translateX(0px);
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 310px) {
+  figure #slider {
+    top: 40%;
+  }
   figure #slider ul li:nth-of-type(4) {
     transform: translateX(0px) scale(1);
   }
@@ -771,38 +828,7 @@ figure .pop.on .close {
     bottom: 6vh;
     left: -5px;
     justify-content: center;
-  }
-}
-@media screen and (max-width: 300px) {
-  figure #slider ul li:nth-of-type(4) {
-    transform: translateX(0px) scale(1);
-  }
-  figure #slider ul li:nth-of-type(4) h2 {
-    color: #aaa;
-    top: -1vh;
-  }
-  figure .pop h2 {
-    font: 10vw/1 "arial";
-  }
-  figure .pop p {
-    font: 6vw/1.2 "arial";
-  }
-  figure .pop .close {
-    width: 100%;
-    height: 40px;
-    border: 2px solid #fff;
-    font: bold 14px/1 "arial";
-    color: #fff;
-    cursor: pointer;
-    transition: 0.5s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-  }
-  figure .pop .close:hover {
-    background-color: #fff;
-    color: #777;
+    top: 80%;
   }
 }
 #banner {
@@ -864,7 +890,7 @@ figure .pop.on .close {
     margin-left: -10px;
   }
   #banner .panel li h2 {
-    font: bold 15vw/1 arial;
+    font: bold 25vw/1 arial;
     margin-left: 30px;
   }
 }
@@ -961,7 +987,7 @@ figure .pop.on .close {
     font: normal 150%/1 arial;
   }
 }
-@media screen and (max-width: 220px) {
+@media screen and (max-width: 310px) {
   #layout {
     padding: 100px 30px 450px;
   }
@@ -983,7 +1009,7 @@ figure .pop.on .close {
     font-size: 5vw;
   }
   #layout .inner .lay article h2 {
-    font: normal 90%/1 arial;
+    font: normal 100%/1 arial;
   }
 }
 footer {
@@ -1017,8 +1043,11 @@ footer .inner ul li {
   float: left;
   margin-left: 30px;
   margin-bottom: -100px;
+  display: flex;
+  flex-wrap: nowrap;
 }
 footer .inner ul li a {
+  width: 100%;
   font: 14px/1 arial;
   color: #999;
   margin-left: 17px;
@@ -1039,38 +1068,25 @@ footer .inner p {
   color: #aaa;
 }
 
-@media screen and (max-width: 1170px) {
+@media screen and (max-width: 310px) {
+  footer {
+    width: 100%;
+  }
   footer .inner {
     width: 100%;
   }
-  footer .inner ul {
-    float: left;
-    display: flex;
-    margin-left: 500px;
-  }
-  footer .inner ul li {
-    float: left;
-    margin-left: 10%;
-    margin-bottom: -100px;
-  }
-  footer .inner ul li a {
-    font: 90%/1 arial;
+  footer .inner h1 {
+    margin-bottom: 30px;
     margin-left: 10px;
   }
-  footer .inner address {
-    float: left;
-    width: 100%;
-    font: 14px/1.3 arial;
-    margin-top: 50px;
-    line-height: 30px;
-    color: #888;
-    border-top: 1px solid #888;
-    padding-top: 30px;
+  footer .inner ul {
+    margin-left: 0px;
   }
-  footer .inner p {
-    float: left;
-    margin-top: 50px;
-    color: #aaa;
+  footer .inner ul li {
+    margin-left: 0px;
+  }
+  footer .inner ul li a {
+    font: 13px/1 arial;
   }
 }
 fieldset {

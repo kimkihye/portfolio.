@@ -71,7 +71,73 @@
     }
 }
 
-@media screen and (max-width:1500px){
+// @media screen and (max-width:1500px){
+//     #brand{
+//         width: 100%;
+//         .inner{
+//             width: 100%;
+//             .wrap{
+//                 width: 450%;
+//                 height: 100%;
+//                 margin-left: 20px;
+//                 .panel{
+//                     article{
+//                     width: calc(100% / 6);
+//                     height: 70vw;
+//                     padding: 10px 270px 10px 60px; 
+//                     float: left;
+//                         img{
+//                             width: 100%; height: 100%; 
+//                             display: flex; justify-content: center; align-items: center;
+//                         }
+//                     }
+//                 }
+//             }
+//             .prevs{
+//                 left: 10px; 
+//             }
+//             .nexts{
+//                  right: 10px; 
+    
+//             }
+//         }
+//         .natus{
+//             font: bold 20vw/1 arial;
+//             margin-top: 20px;
+//             left: -10px;
+//         }
+//     }
+// }
+
+// @media screen and (max-width:310px){
+//     #brand{
+//         .inner{
+//             .wrap{
+//                 .panel{
+//                     article{
+//                     padding: 10px 200px 10px 60px;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// @media screen and (max-width:500px){
+//     #brand{
+//         .inner{
+//             .wrap{
+//                 .panel{
+//                     article{
+//                     padding: 10px 150px 10px 50px; 
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+
+@media screen and (max-width:310px){
     #brand{
         width: 100%;
         .inner{
@@ -84,20 +150,22 @@
                     article{
                     width: calc(100% / 6);
                     height: 70vw;
-                    padding: 10px 270px 10px 60px; 
+                    // padding: 10px 270px 10px 60px; 
                     float: left;
-                        img{
-                            width: 100%; height: 100%; 
-                            display: flex; justify-content: center; align-items: center;
-                        }
+                    padding: 10px 100px 10px 30px; 
+                    img{
+                        width: 100%; height: 100%; 
+                        display: flex; justify-content: center; align-items: center;
+                    }
                     }
                 }
             }
             .prevs{
-                left: 10px; 
+                left: -5px; 
+                
             }
             .nexts{
-                 right: 10px; 
+                 right: -5px; 
     
             }
         }
@@ -109,64 +177,7 @@
     }
 }
 
-@media screen and (max-width:1199px){
-    #brand{
-        .inner{
-            .wrap{
-                .panel{
-                    article{
-                    padding: 10px 200px 10px 60px;
-                    }
-                }
-            }
-        }
-    }
-}
 
-@media screen and (max-width:500px){
-    #brand{
-        .inner{
-            .wrap{
-                .panel{
-                    article{
-                    padding: 10px 150px 10px 50px; 
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media screen and (max-width:300px){
-    #brand{
-        .inner{
-            .wrap{
-                .panel{
-                    article{
-                    padding: 10px 100px 10px 30px; 
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media screen and (max-width:160px){
-    #brand{
-        .inner{
-            h1{
-                font: bold 25px/1 "Nanum Myeongjo";
-            }
-            .wrap{
-                .panel{
-                    article{
-                    padding: 0px 80px 20px 20px; 
-                    }
-                }
-            }
-        }
-    }
-}
 
 
      
