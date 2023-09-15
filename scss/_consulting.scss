@@ -104,3 +104,71 @@ table{
         }
     }
 }
+
+@media screen and (max-width:1199px){
+    .join{
+        .inner{
+            margin-left: 10%;
+            h1{
+                font: bold 0px/1 "arial";
+            }
+            p{
+                font: normal 0px/1 arial;
+            }
+            img{
+                display: none;
+            }
+            h2{
+                font: normal 17vw/1 "Raleway";
+            }
+            table{
+                th,
+                td{
+                }
+    
+                th{
+                    width: 20%;
+    
+                    input[type="reset"],
+                    input[type="submit"] {
+                        width: 30%;
+                        height: 40px;
+                        border: 1px solid #333;
+                        margin: 10px;
+                        font: bold 14px/40px "맑은 고딕";
+                        color: #555;
+                        cursor: pointer;
+                        background-color: #fff;
+    
+                        &:hover {
+                            background-color: #333;
+                            color: #fff;
+                        }
+                    }
+                }
+                td{
+                    border-left: 1px solid #aaa;
+                    position: relative;
+                }
+                input[type="checkbox"] {
+                    margin-right: 30px
+                }
+                textarea {
+                    resize: none;
+                    width: 60%;
+                    height: 150px;
+                    padding: 10px;
+                    border: 1px solid #aaa;
+                    background-color: rgba(0, 0, 0, 0.03);
+                }
+                p {
+                    // js동적으로 생성할 태그
+                    font: bold 11px/1 "맑은 고딕";
+                    color: darkred;
+                    margin-top: 10px;
+                    position: static;
+                }
+            }
+        }
+    }
+}

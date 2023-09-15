@@ -1175,6 +1175,63 @@ table {
   position: static;
 }
 
+@media screen and (max-width: 1199px) {
+  .join .inner {
+    margin-left: 10%;
+  }
+  .join .inner h1 {
+    font: bold 0px/1 "arial";
+  }
+  .join .inner p {
+    font: normal 0px/1 arial;
+  }
+  .join .inner img {
+    display: none;
+  }
+  .join .inner h2 {
+    font: normal 17vw/1 "Raleway";
+  }
+  .join .inner table th {
+    width: 20%;
+  }
+  .join .inner table th input[type=reset],
+  .join .inner table th input[type=submit] {
+    width: 30%;
+    height: 40px;
+    border: 1px solid #333;
+    margin: 10px;
+    font: bold 14px/40px "맑은 고딕";
+    color: #555;
+    cursor: pointer;
+    background-color: #fff;
+  }
+  .join .inner table th input[type=reset]:hover,
+  .join .inner table th input[type=submit]:hover {
+    background-color: #333;
+    color: #fff;
+  }
+  .join .inner table td {
+    border-left: 1px solid #aaa;
+    position: relative;
+  }
+  .join .inner table input[type=checkbox] {
+    margin-right: 30px;
+  }
+  .join .inner table textarea {
+    resize: none;
+    width: 60%;
+    height: 150px;
+    padding: 10px;
+    border: 1px solid #aaa;
+    background-color: rgba(0, 0, 0, 0.03);
+  }
+  .join .inner table p {
+    font: bold 11px/1 "맑은 고딕";
+    color: darkred;
+    margin-top: 10px;
+    position: static;
+  }
+}
 #company {
   width: 100%;
   height: 100%;
