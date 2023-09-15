@@ -68,6 +68,7 @@ header .inner .btnCall {
   display: none;
   width: 20px;
   height: 20px;
+  z-index: 3;
 }
 header .inner .btnCall::before {
   content: "";
@@ -125,7 +126,7 @@ header .inner .menuMo {
   top: 0;
   left: -270px;
   padding: 35px 30px;
-  z-index: 10;
+  z-index: 1;
   transition: 0.5s;
 }
 header .inner .menuMo.on {
@@ -138,7 +139,7 @@ header .inner .menuMo h1 {
 header .inner .menuMo h1 a {
   display: block;
   font: bold 24px/1 "arial";
-  color: #fff;
+  color: #999;
   text-align: center;
 }
 header .inner .menuMo h1 span {
@@ -321,12 +322,12 @@ header .inner .menuMo #gnbMo li a {
   justify-content: space-between;
   align-items: center;
 }
-.boxes .inner .pic {
-  width: 35%;
+.boxes .inner .pics {
+  width: 30%;
   object-fit: cover;
 }
 .boxes .inner .content {
-  width: 60%;
+  width: 65%;
 }
 .boxes .inner .content h2 {
   font: 5vw/1 arial;
@@ -353,84 +354,29 @@ header .inner .menuMo #gnbMo li a {
   #main .inner .btnOpen {
     top: 80%;
   }
+  .boxes .inner {
+    width: 100%;
+  }
+  .boxes .inner .pics {
+    width: 0%;
+  }
+  .boxes .inner .content {
+    width: 100%;
+    margin-top: 50px;
+  }
+  .boxes .inner .content h2 {
+    font: 5vw/1 arial;
+    margin-bottom: 20px;
+  }
+  .boxes .inner .content p {
+    font: 14px/1.3 arial;
+  }
+  .boxes .inner .content .btnClose {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+  }
 }
-.boxes {
-  width: 60vw;
-  height: 60vh;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: none;
-}
-.boxes .top {
-  width: 0%;
-  height: 1px;
-  background-color: #fff;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.boxes .right {
-  width: 1px;
-  height: 0%;
-  background-color: #fff;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-.boxes .bottom {
-  width: 0%;
-  height: 1px;
-  background-color: #fff;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-.boxes .left {
-  width: 1px;
-  height: 0%;
-  background-color: #fff;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-.boxes .inner {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.05);
-  backdrop-filter: blur(15px);
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  padding: 50px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-}
-.boxes .inner .pic {
-  width: 80%;
-}
-.boxes .inner .content {
-  width: 100%;
-}
-.boxes .inner .content h2 {
-  font: 5vw/1 arial;
-  color: #bbb;
-  margin-bottom: 20px;
-}
-.boxes .inner .content p {
-  font: 14px/1.3 arial;
-  color: #fff;
-}
-.boxes .inner .content .btnClose {
-  position: absolute;
-  top: 40px;
-  right: 40px;
-}
-
 #brand {
   width: 100%;
   padding: 200px 0;
@@ -1460,6 +1406,46 @@ table {
 }
 
 @media screen and (max-width: 1199px) {
+  .btnCall {
+    display: block;
+  }
+  .btnCall::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #000;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: bottom 0.5s 0s, transform 0.5s 0.5s;
+  }
+  .btnCall span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #000;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -1px;
+    transition: 1s;
+    text-indent: -9999px;
+  }
+  .btnCall.on::before {
+    top: 50%;
+    margin-top: -1px;
+    transform: rotate(45deg);
+  }
+  .btnCall.on::after {
+    bottom: 50%;
+    margin-bottom: -1px;
+    transform: rotate(-45deg);
+  }
+  .btnCall.on span {
+    transform: translateX(100%);
+    opacity: 0;
+  }
   #company .inner {
     width: 200%;
   }
@@ -1545,14 +1531,14 @@ table {
     margin-left: -100px;
   }
   #tap .panels li:nth-of-type(1) h2 {
-    font: bold 80px/1 arial;
-    top: 20%;
-    margin-left: 60px;
+    font: bold 15vw/1 arial;
+    top: 55%;
+    margin-left: -60px;
   }
   #tap .panels li:nth-of-type(1) p {
-    top: 40%;
-    margin-left: 60px;
-    font: 20px/1.2 arial;
+    top: 67%;
+    margin-left: -63px;
+    font: 3vw/1.2 arial;
   }
   #tap .panels li:nth-of-type(2) img {
     width: 100%;
@@ -1560,14 +1546,14 @@ table {
     margin-left: -160px;
   }
   #tap .panels li:nth-of-type(2) h2 {
-    font: bold 80px/1 arial;
-    top: 20%;
-    margin-left: 60px;
+    font: bold 15vw/1 arial;
+    top: 55%;
+    margin-left: -110px;
   }
   #tap .panels li:nth-of-type(2) p {
-    top: 40%;
-    margin-left: 60px;
-    font: 20px/1.2 arial;
+    top: 67%;
+    margin-left: -143px;
+    font: 3vw/1.2 arial;
   }
   #tap .panels li:nth-of-type(3) img {
     width: 100%;
@@ -1575,13 +1561,14 @@ table {
     margin-left: -220px;
   }
   #tap .panels li:nth-of-type(3) h2 {
-    font: bold 80px/1 arial;
-    top: 20%;
-    margin-left: 60px;
+    font: bold 15vw/1 arial;
+    top: 55%;
+    margin-left: -160px;
   }
   #tap .panels li:nth-of-type(3) p {
-    top: 40%;
-    margin-left: 60px;
+    top: 67%;
+    margin-left: -190px;
+    font: 3vw/1.2 arial;
   }
   .btn {
     left: 40%;

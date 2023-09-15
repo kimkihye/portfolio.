@@ -169,17 +169,17 @@ let timer = null;
 const interval = 5000; //롤링 반복 시간
 
 
-startRolling();
+// startRolling();
 
 
-//적용하는 대상으로는 동작 3가지
-//1.btns를 클릭하면 해당 인덱스로 이동하는 동작
-btnss.forEach((el, index) => {
-    el.addEventListener("click", () => {
-        active(index);
-        stopRolling();
-    });
-})
+// //적용하는 대상으로는 동작 3가지
+// //1.btns를 클릭하면 해당 인덱스로 이동하는 동작
+// btnss.forEach((el, index) => {
+//     el.addEventListener("click", () => {
+//         active(index);
+//         stopRolling();
+//     });
+// })
 
 //2.play btn을 클릭하면 자동롤링이 시작
 // btnPlay.addEventListener("click", (e) => {
@@ -196,30 +196,30 @@ btnss.forEach((el, index) => {
 
 //적용하는 기능을 담은 함수를 생성
 
-//1 롤링 시작기능
-function startRolling() {
-    bar.style.display = "block"; //1
-    setTimeout(progress, 0);  //2
+// //1 롤링 시작기능
+// function startRolling() {
+//     bar.style.display = "block"; //1
+//     setTimeout(progress, 0);  //2
 
-    active(num);
-    //언제나 1이 먼저 실행되고 2가 이후에 실행됩니다
-    // setInterval(()=>{},시간)
-    //setInterval 콜백함수를 시간마다 계속 실행하도록 요청합니다
-    //단점 : 리소스 찌꺼기가 남아요
-    timer = setInterval(rolling, interval);
+//     active(num);
+//     //언제나 1이 먼저 실행되고 2가 이후에 실행됩니다
+//     // setInterval(()=>{},시간)
+//     //setInterval 콜백함수를 시간마다 계속 실행하도록 요청합니다
+//     //단점 : 리소스 찌꺼기가 남아요
+//     timer = setInterval(rolling, interval);
 
     // btnPlay.classList.add("on");
     // btnStop.classList.remove("on");
-}
+// }
 
 //2롤링을 멈추는 기능
-function stopRolling() {
-    bar.style.display = "none";
-    clearInterval(timer);
-    // setInterval이 만든 리소스 찌꺼기를 깔끔하게 청소해줍니다
-    btnStop.classList.add("on");
-    btnPlay.classList.remove("on");
-}
+// function stopRolling() {
+//     bar.style.display = "none";
+//     clearInterval(timer);
+//     // setInterval이 만든 리소스 찌꺼기를 깔끔하게 청소해줍니다
+//     btnStop.classList.add("on");
+//     btnPlay.classList.remove("on");
+// }
 
 //3. on클래스로 활성화 기능
 function active(index) {
@@ -251,34 +251,34 @@ function rolling() {
 }
 
 //4. bar를 움직이는 기능
-function progress() {
+// function progress() {
 
-    const init = parseInt(bar.style.width) || 0;
-    // const targetValue = 100;
-    const unit = "%";
-    const startTime = performance.now();
-    function animate(time) {
-        const realTime = time - startTime;
-        const prog = realTime / interval;
-        //prog의 값은 0~1사이의 값이 됩니다
-        const currentValue = init + 100 * prog;
-        //시작은 0 끝은 100
-        bar.style.width = `${currentValue}${unit}`;
+//     const init = parseInt(bar.style.width) || 0;
+//     // const targetValue = 100;
+//     const unit = "%";
+//     const startTime = performance.now();
+//     function animate(time) {
+//         const realTime = time - startTime;
+//         const prog = realTime / interval;
+//         //prog의 값은 0~1사이의 값이 됩니다
+//         const currentValue = init + 100 * prog;
+//         //시작은 0 끝은 100
+//         bar.style.width = `${currentValue}${unit}`;
 
-        if (prog < 1) {
-            requestAnimationFrame(animate);
-        } else if (prog >= 1) {
-            bar.style.width = "0%";
-            // if (typeof callback === "function") callback();
-        }
+//         if (prog < 1) {
+//             requestAnimationFrame(animate);
+//         } else if (prog >= 1) {
+//             bar.style.width = "0%";
+//             // if (typeof callback === "function") callback();
+//         }
 
-    }
-    requestAnimationFrame(animate);
-    //requestAnimationFrame메소드안에 함수를 호출해서 실행해야하므로 
-    // requestAnimationFrame(animate);이 렇게 작성해야합니다
-    // requestAnimationFrame(animate());
-    //이 내용은 함수의 값을 requestAnimationFrame에 매개변수로 넣는다는 의미
-}
+//     }
+//     requestAnimationFrame(animate);
+//     //requestAnimationFrame메소드안에 함수를 호출해서 실행해야하므로 
+//     // requestAnimationFrame(animate);이 렇게 작성해야합니다
+//     // requestAnimationFrame(animate());
+//     //이 내용은 함수의 값을 requestAnimationFrame에 매개변수로 넣는다는 의미
+// }
 
 //메인
 const btnOpen = document.querySelector(".btnOpen");
