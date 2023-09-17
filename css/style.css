@@ -445,7 +445,7 @@ header .inner .menuMo #gnbMo li a {
   left: -10px;
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 460px) {
   #brand {
     width: 100%;
   }
@@ -460,7 +460,7 @@ header .inner .menuMo #gnbMo li a {
   #brand .inner .wrap .panel article {
     width: 16.6666666667%;
     height: 70vw;
-    padding: 10px 270px 10px 60px;
+    padding: 10px 150px 10px 60px;
     float: left;
   }
   #brand .inner .wrap .panel article img {
