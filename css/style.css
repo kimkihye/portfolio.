@@ -445,6 +445,43 @@ header .inner .menuMo #gnbMo li a {
   left: -10px;
 }
 
+@media screen and (max-width: 1500px) {
+  #brand {
+    width: 100%;
+  }
+  #brand .inner {
+    width: 100%;
+  }
+  #brand .inner .wrap {
+    width: 450%;
+    height: 100%;
+    margin-left: 20px;
+  }
+  #brand .inner .wrap .panel article {
+    width: 16.6666666667%;
+    height: 70vw;
+    padding: 10px 270px 10px 60px;
+    float: left;
+  }
+  #brand .inner .wrap .panel article img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #brand .inner .prevs {
+    left: 10px;
+  }
+  #brand .inner .nexts {
+    right: 10px;
+  }
+  #brand .natus {
+    font: bold 20vw/1 arial;
+    margin-top: 20px;
+    left: -10px;
+  }
+}
 @media screen and (max-width: 310px) {
   #brand {
     width: 100%;
@@ -791,7 +828,7 @@ figure .pop.on .close {
   transform: translateX(0px);
 }
 
-@media screen and (max-width: 310px) {
+@media screen and (max-width: 1199px) {
   figure #slider {
     top: 40%;
   }
@@ -1191,45 +1228,8 @@ table {
   .join .inner h2 {
     font: normal 17vw/1 "Raleway";
   }
-  .join .inner table th {
-    width: 20%;
-  }
-  .join .inner table th input[type=reset],
-  .join .inner table th input[type=submit] {
-    width: 30%;
-    height: 40px;
-    border: 1px solid #333;
-    margin: 10px;
-    font: bold 14px/40px "맑은 고딕";
-    color: #555;
-    cursor: pointer;
-    background-color: #fff;
-  }
-  .join .inner table th input[type=reset]:hover,
-  .join .inner table th input[type=submit]:hover {
-    background-color: #333;
-    color: #fff;
-  }
-  .join .inner table td {
-    border-left: 1px solid #aaa;
-    position: relative;
-  }
   .join .inner table input[type=checkbox] {
-    margin-right: 30px;
-  }
-  .join .inner table textarea {
-    resize: none;
-    width: 60%;
-    height: 150px;
-    padding: 10px;
-    border: 1px solid #aaa;
-    background-color: rgba(0, 0, 0, 0.03);
-  }
-  .join .inner table p {
-    font: bold 11px/1 "맑은 고딕";
-    color: darkred;
-    margin-top: 10px;
-    position: static;
+    margin-right: 70px;
   }
 }
 #company {
@@ -1463,51 +1463,12 @@ table {
 }
 
 @media screen and (max-width: 1199px) {
-  .btnCall {
-    display: block;
-  }
-  .btnCall::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 2px;
-    background: #000;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    transition: bottom 0.5s 0s, transform 0.5s 0.5s;
-  }
-  .btnCall span {
-    display: block;
-    width: 100%;
-    height: 2px;
-    background: #000;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    margin-top: -1px;
-    transition: 1s;
-    text-indent: -9999px;
-  }
-  .btnCall.on::before {
-    top: 50%;
-    margin-top: -1px;
-    transform: rotate(45deg);
-  }
-  .btnCall.on::after {
-    bottom: 50%;
-    margin-bottom: -1px;
-    transform: rotate(-45deg);
-  }
-  .btnCall.on span {
-    transform: translateX(100%);
-    opacity: 0;
-  }
   #company .inner {
     width: 200%;
   }
   #company .inner h2 {
     font: bold 7vw/1 "Nanum Myeongjo";
+    margin-top: -200px;
   }
   #company .inner p {
     font: 3vw/1 "arial";
@@ -1542,13 +1503,10 @@ table {
     width: 150px;
     height: 150px;
   }
-  #news2 {
-    padding: 10px 0 100px 0px;
-  }
   #news2 .boxs {
     width: 100%;
     height: 300px;
-    margin-left: -50px;
+    margin-left: -10px;
     margin-bottom: 600px;
   }
   #news2 .boxs article {
@@ -1693,9 +1651,9 @@ table {
     margin-top: 150px;
   }
   .location .inner h2 {
-    margin-bottom: 10px;
-    font: bold 15vw/1 arial;
-    margin-left: -890px;
+    margin-bottom: 50px;
+    font: bold 10vw/1 arial;
+    margin-left: -20px;
   }
   .location .inner .loca {
     display: none;
@@ -1707,19 +1665,11 @@ table {
     margin-bottom: 20px;
     z-index: 0;
   }
-  .location::after {
-    content: "";
-    display: block;
-    clear: both;
-  }
-  .location .traffic {
-    float: left;
-  }
   .location .traffic li {
     margin-top: 10px;
   }
   .location .traffic li a {
-    margin-left: 40px;
+    margin-left: 70px;
   }
 }
 

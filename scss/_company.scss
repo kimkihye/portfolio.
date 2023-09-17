@@ -259,49 +259,6 @@
 
 
 @media screen and (max-width:1199px){
-    .btnCall{
-        display: block;
-
-        &::after {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 2px;
-        background: #000;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        transition: bottom 0.5s 0s, transform 0.5s 0.5s;
-    }
-    span {
-        display: block;
-        width: 100%;
-        height: 2px;
-        background: #000;
-        position: absolute;
-        top: 50%;
-        left: 0;
-        margin-top: -1px;
-        transition: 1s;
-        text-indent: -9999px;
-    }
-    &.on {
-        &::before {
-            top: 50%;
-            margin-top: -1px;
-            transform: rotate(45deg);
-        }
-        &::after {
-            bottom: 50%;
-            margin-bottom: -1px;
-            transform: rotate(-45deg);
-        }
-        span {
-            transform: translateX(100%);
-            opacity: 0;
-        }
-    }
-    }
     #company{
         img{
         }
@@ -309,6 +266,7 @@
             width: 200%;
             h2{
                 font: bold 7vw/1 "Nanum Myeongjo";
+                margin-top: -200px;
             }
             p{
                 font: 3vw/1 "arial";
@@ -355,13 +313,14 @@
     
     //2
     #news2{
-        padding: 10px 0 100px 0px;
+        // padding: 10px 0 100px 0px;
         .boxs{
             width: 100%;
             height: 300px;
-            margin-left: -50px;
+            margin-left: -10px;
             margin-bottom: 600px;
             article{
+                
                 width: 250px;
                 height: 250px;
                 margin-left: 75px;

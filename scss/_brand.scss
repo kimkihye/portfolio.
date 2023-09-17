@@ -1,4 +1,3 @@
-
 #brand{
     width: 100%;
     padding: 200px 0;
@@ -28,7 +27,6 @@
                     height: 430px;
                     padding: 10px; 
                     float: left;
-                    // transition: 0.2s;
                     img{
                         width: 100%; height: 100%; 
                         display: flex; justify-content: center; align-items: center;
@@ -36,24 +34,15 @@
                             opacity: 85%;
                         }
                     }
-
-                    // span {
-                        
-                    //     // overflow: visible;
-                    // }
                 }
             }
         }
         .prevs{
-            // display: block;
-            // width: 20px; height: 1px;
             position: absolute; top: 50%; left: -100px; margin-top: -20px;
 
             
         }
         .nexts{
-            // display: block;
-            // width: 20px; height: 1px;
             position: absolute; top: 50%; right: -100px; margin-top: -20px;
 
         }
@@ -61,81 +50,53 @@
     .natus{
         position: absolute;
         font: bold 200px/1 arial;
-        // background: linear-gradient(#6D6027, #D3CBB8);
         background: linear-gradient(#093028,#237A57);
         color: transparent;
         -webkit-background-clip: text;
-        // text-shadow: 2px 2px 10px rgba(0,0,0,0.2);
         margin-top: 20px;
         left: -10px;
     }
 }
 
-// @media screen and (max-width:1500px){
-//     #brand{
-//         width: 100%;
-//         .inner{
-//             width: 100%;
-//             .wrap{
-//                 width: 450%;
-//                 height: 100%;
-//                 margin-left: 20px;
-//                 .panel{
-//                     article{
-//                     width: calc(100% / 6);
-//                     height: 70vw;
-//                     padding: 10px 270px 10px 60px; 
-//                     float: left;
-//                         img{
-//                             width: 100%; height: 100%; 
-//                             display: flex; justify-content: center; align-items: center;
-//                         }
-//                     }
-//                 }
-//             }
-//             .prevs{
-//                 left: 10px; 
-//             }
-//             .nexts{
-//                  right: 10px; 
+@media screen and (max-width:1500px){
+    #brand{
+        width: 100%;
+        .inner{
+            width: 100%;
+            .wrap{
+                width: 450%;
+                height: 100%;
+                margin-left: 20px;
+                .panel{
+                    article{
+                    width: calc(100% / 6);
+                    height: 70vw;
+                    padding: 10px 270px 10px 60px; 
+                    float: left;
+                        img{
+                            width: 100%; height: 100%; 
+                            display: flex; justify-content: center; align-items: center;
+                        }
+                    }
+                }
+            }
+            .prevs{
+                left: 10px; 
+            }
+            .nexts{
+                 right: 10px; 
     
-//             }
-//         }
-//         .natus{
-//             font: bold 20vw/1 arial;
-//             margin-top: 20px;
-//             left: -10px;
-//         }
-//     }
-// }
+            }
+        }
+        .natus{
+            font: bold 20vw/1 arial;
+            margin-top: 20px;
+            left: -10px;
+        }
+    }
+}
 
-// @media screen and (max-width:310px){
-//     #brand{
-//         .inner{
-//             .wrap{
-//                 .panel{
-//                     article{
-//                     padding: 10px 200px 10px 60px;
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
 
-// @media screen and (max-width:500px){
-//     #brand{
-//         .inner{
-//             .wrap{
-//                 .panel{
-//                     article{
-//                     padding: 10px 150px 10px 50px; 
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
 
 @media screen and (max-width:310px){
     #brand{

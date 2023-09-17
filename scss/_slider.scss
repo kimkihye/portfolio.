@@ -1,5 +1,3 @@
-@charset "utf-8";
-
 $size : 400px;
 $deg : 50deg;
 
@@ -8,7 +6,6 @@ figure {
     height: 100vh;
     position: relative;
     overflow: hidden;
-    // background-color: #f4f3ea;
     #slider {
         width: $size;
         height: $size;
@@ -321,7 +318,6 @@ figure {
         position: absolute;
         top: 0;
         left: -50vw;
-        // left: 0;
         background-color: rgba(0, 0, 0, 0.05);
         backdrop-filter: blur(10px);
         padding: 22vh 5vw 10vh 6vw;
@@ -381,7 +377,7 @@ figure {
 }
 
 
-@media screen and (max-width:310px) {
+@media screen and (max-width:1199px) {
     figure {
         #slider {
             top: 40%;
